@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Servicios de TI de Juárez</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: rgb(8, 28, 33);
+            color: rgb(7, 121, 104);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Servicios de TI de Juárez</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Ponte en contacto con nuestros expertos</h2>
+                <ul id="servicios" class="list-group">
+                    <li class="list-group-item">Desarrollo de Aplicaciones Web</li>
+                    <li class="list-group-item">Mantenimiento a equipo de cómputo</li>
+                    <li class="list-group-item">Actualización de Infraestructura de Red</li>
+                    <li class="list-group-item">Hosting</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Consultores</h2>
+                <ul id="consultores" class="list-group">
+                    <li class="list-group-item">
+                        <img src="https://static.vecteezy.com/system/resources/previews/021/923/659/large_2x/business-man-image-generative-ai-image-free-photo.jpg"width="200" height="300" alt="Consultor 1" class="img-thumbnail">
+                        <div>
+                            <h4>Alexander Alegria </h4>
+                            <p>alexander_alegria@outlook.com</p>
+                            <p>Servicio: Desarrollo de Aplicaciones Web</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="https://blog.direccionefectiva.com/hubfs/Young%20technician%20working%20on%20broken%20computer%20in%20his%20office.jpeg" width="350" height="350" alt="Consultor 2" class="img-thumbnail">
+                        <div>
+                            <h4>Luis Domínguez Rosales</h4>
+                            <p>lucho_dominguez@consultores.com</p>
+                            <p>Servicio: Mantenimiento a equipo de cómputo</p>
+                        </div>
+                    </li>
+                    <!-- Agrega más consultores hasta completar ocho-->
+                    <li class="list-group-item">
+                        <img src="https://cdn.pixabay.com/photo/2023/03/25/20/06/ai-generated-7876735_1280.jpg"width="200" height="300" alt="Consultor 3" class="img-thumbnail">
+                        <div>
+                            <h4>Mario Velez Saucedo</h4>
+                            <p>mario_velez@consultores.com</p>
+                            <p>Servicio: Actualización de Infraestructura de Red</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="https://img.freepik.com/foto-gratis/retrato-primer-plano-hermosa-joven-rubia-vestida-pijama-turquesa-sentada-junto-ventana-ella-feliz-sonriendo-tocandose-cabello-ondulado_197531-2808.jpg" width="400" height="400" alt="Consultor 4" class="img-thumbnail">
+                        <div>
+                            <h4>Elena Weber</h4>
+                            <p>elena_Webero@consultores.com</p>
+                            <p>Servicio: Hosting</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="https://img.freepik.com/fotos-premium/imagen-generada-ia_425671-1013.jpg" width="200" height="300" alt="Consultor 5" class="img-thumbnail">
+                        <div>
+                            <h4>Karol Olivas Zapara</h4>
+                            <p>karol_olivas@consultores.com</p>
+                            <p>Servicio: Desarrollo de Aplicaciones Web</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Cambiar estilo al hacer clic en un servicio
+            $('#servicios li').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                var servicioSeleccionado = $(this).text();
+                // Filtrar la lista de consultores por servicio
+                $('#consultores li').each(function () {
+                    var servicio = $(this).find('p:last').text().split(': ')[1];
+                    if (servicio === servicioSeleccionado) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
